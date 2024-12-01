@@ -20,7 +20,7 @@ export default function Intro() {
     <div className='intro' id="intro">
       <div className='lefti'>
         <div className="imageContaineri">
-          <img className='imgi' src='assets/logo.png' alt=''/>
+          <img className='imgi' src='assets/Logo.png' alt=''/>
         </div>
       </div>
       <div className='right'>
