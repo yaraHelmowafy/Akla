@@ -131,4 +131,36 @@
           }
       }
   }
+  @media only screen and (max-width: 450px) {
+  .intro {
+      flex-direction: column;
+
+      .left {
+          width: 100%;
+
+          .imageContainer {
+              width: 60%;
+              height: auto;
+              float: none;
+              justify-content: center;
+          }
+      }
+
+      .right {
+          width: 100%;
+          margin-top: 20px;
+
+          .wrapper {
+              padding-left: 0;
+              align-items: center;
+              text-align: center;
+          }
+
+          .a {
+              position: static;
+              margin-top: 20px;
+              left: auto;
+          }
+      }
+  }
 }
