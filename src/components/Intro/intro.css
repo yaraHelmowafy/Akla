@@ -13,8 +13,8 @@
       color: white;
       border-radius: 20%;
       display: flex;
-      align-items: flex-start;
-      justify-content: center;
+      align-items: center; /* Center the image horizontally */
+      justify-content: center; /* Center the image vertically */
       float: right;
 
       .imgi {
@@ -102,10 +102,11 @@
       width: 100%;
 
       .imageContaineri {
-        width: 70%; /* Adjust the image size for tablet screens */
+        width: 60%; /* Smaller image size for tablets */
         height: auto;
         float: none;
         justify-content: center;
+        align-items: center;
       }
     }
 
@@ -135,10 +136,11 @@
         width: 100%;
 
         .imageContaineri {
-          width: 50%; /* Further reduce image size for smaller mobile screens */
+          width: 40%; /* Even smaller image size for small mobile screens */
           height: auto;
           float: none;
           justify-content: center;
+          align-items: center;
         }
       }
 
