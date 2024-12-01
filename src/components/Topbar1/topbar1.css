@@ -139,4 +139,8 @@
     .right .hamburger {
         display: none; /* Hide the hamburger icon */
     }
+    @media (max-width: 450px) {
+    .right .hamburger {
+        display: none; /* Hide the hamburger icon */
+    }
 }
