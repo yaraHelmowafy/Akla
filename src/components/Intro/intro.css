@@ -7,9 +7,9 @@
     overflow: hidden;
 
     .imageContaineri {
-      margin-top: 50px;
-      width: 500px;
-      height: 600px;
+      margin-top: 70px; /* Move image down by 20px more */
+      width: 65%; /* Increase the width for a bigger image */
+      height: auto;
       color: white;
       border-radius: 20%;
       display: flex;
@@ -102,7 +102,8 @@
       width: 100%;
 
       .imageContaineri {
-        width: 60%; /* Smaller image size for tablets */
+        width: 65%; /* Slightly increase image size for tablets */
+        margin-top: 80px; /* Move the image down more */
         height: auto;
         float: none;
         justify-content: center;
@@ -136,7 +137,8 @@
         width: 100%;
 
         .imageContaineri {
-          width: 40%; /* Even smaller image size for small mobile screens */
+          width: 50%; /* Increase image size for small mobile screens */
+          margin-top: 90px; /* Move the image down more */
           height: auto;
           float: none;
           justify-content: center;
@@ -146,7 +148,7 @@
 
       .right {
         width: 100%;
-        margin-top: 70px;
+        margin-top: 20px;
 
         .wrapper {
           padding-left: 0;
