@@ -1,0 +1,121 @@
+.contact {
+    background-color: white; /* Light background for the section */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  .contact-card {
+    background-color: #efefee;
+    border-radius: 10px; /* Rounded corners for the card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    width: 90%;
+    max-width: 1000px; /* Maximum width for the card */
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between the image and text */
+  }
+  
+  .leftc, .rightc {
+    flex: 1;
+  }
+  
+  .leftc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imageContainerc {
+    width: 100%;
+    max-width: 300px; /* Limit the image size */
+    height: auto;
+  }
+  
+  .imgc {
+    width: 100%;
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+  }
+  
+  .rightc {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 10px;
+  }
+  
+  .wrapperc {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Space between text blocks */
+  }
+  
+  .location, .phone {
+    display: flex;
+    align-items: center;
+  }
+  
+  .location .icon, .phone .icon {
+    font-size: 30px;
+    color: goldenrod;
+    margin-right: 10px;
+  }
+  
+  .whatsapp-icon {
+    font-size: 30px;
+    color: #25D366;
+    margin-left: 10px;
+  }
+  
+  .h1, .h2, .h3 {
+    margin: 0;
+    color: black;
+  }
+  
+  .h1 {
+    font-size: 18px;
+  }
+  
+  .h2 {
+    font-size: 22px;
+    font-weight: bold;
+  }
+  
+  .h3 {
+    font-size: 20px;
+  }
+  
+  .phone-link {
+    text-decoration: none;
+    color: goldenrod;
+    transition: color 0.3s;
+  }
+  
+  .phone-link:hover {
+    color: darkgoldenrod;
+  }
+  
+  /* Media Queries */
+  @media only screen and (max-width: 768px) {
+    .contact-card {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .leftc, .rightc {
+      width: 100%;
+    }
+  
+    .imgc {
+      max-width: 100%;
+    }
+  
+    .wrapperc {
+      align-items: center;
+    }
+  }
+  

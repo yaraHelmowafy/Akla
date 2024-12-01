@@ -1,0 +1,114 @@
+.VF {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Encode Sans', sans-serif;
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 40px;
+  color: goldenrod;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px;
+  width: 80%;
+  max-width: 1200px;
+  overflow-x: auto; /* Ensure scrollable if there are many cards */
+  padding-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 350px;
+  height: 100px;
+  font-size: 100px;
+  border-radius: 20px;
+  /* box-shadow: 0px 0px 15px -8px black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Adjusted to push content to the bottom */
+  padding: 10px;
+  transition: all 1s ease;
+  
+  color: goldenrod;
+
+  text-align: center;
+  overflow: hidden; /* Hide parts of image overflowing */
+}
+
+.card.featured {
+  width: 400px;
+  height: 300px;
+  margin: 0 20px;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: scale(0.8);
+    overflow: hidden;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1; /* Let the image grow in the remaining space */
+}
+
+.img {
+  width: 300px; /* Bigger image */
+  height: 250px;
+  border-radius: 10px; /* Rounded squared effect */
+  object-fit: cover;
+  margin: 5px 5px;
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+.center {
+  font-size: 25px;
+  padding: 10px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start; /* Align text to top of bottom area */
+  align-items: center;
+}
+
+.name, .name2 {
+  color: #012060;
+  font-weight: 400;
+}
+
+@media only screen and (max-width: 768px) {
+  .slider {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .slider {
+    grid-template-columns: 1fr; /* 1 item per row on very small screens */
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+}

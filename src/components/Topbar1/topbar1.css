@@ -1,0 +1,151 @@
+.topbar {
+    &::-webkit-scrollbar {
+        display: none;
+    }
+    width: 100%;
+    height: 70px; /* Ensure consistent height */
+    background-color: white;
+    position: fixed;
+    top: 0;
+    z-index: 4;
+    transition: all 1s ease;
+
+    .wrapper {
+        padding: 10px 20px; /* Adjusted padding for smaller screens */
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+
+        .left {
+            display: flex;
+            align-items: center;
+            color: inherit;
+
+            .logo {
+                font-size: 1.8rem; /* Use relative units */
+                font-weight: 700;
+                text-decoration: none;
+                color: goldenrod; /* Default logo color */
+                margin-right: 20px; /* Reduced margin for smaller screens */
+                transition: color 0.3s ease; /* Transition for color change */
+            }
+
+            .itemsection {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-left: auto; /* Push item section to the right */
+                flex-wrap: wrap; /* Allow wrapping on smaller screens */
+                margin-left: 450px;
+            }
+
+            .itemContainer {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 0 10px; /* Added margin for spacing */
+            }
+
+            .icon {
+                font-size: 1.5rem; /* Use relative units */
+                margin-right: 10px;
+                color: goldenrod; /* Default icon color */
+                transition: color 0.3s ease; /* Transition for color change */
+                &:hover {
+                    font-size: 1.8rem; /* Slightly increase size on hover */
+                }
+            }
+
+            .icon-link {
+                color: inherit;
+                text-decoration: none;
+            }
+
+            /* Additional styles for responsiveness */
+            @media (max-width: 768px) {
+                .itemsection {
+                    margin-left: 0; /* Reset margin on smaller screens */
+                }
+
+                .logo {
+                    font-size: 1.5rem; /* Smaller logo on mobile */
+                }
+            }
+        }
+
+        .right {
+            display: flex; /* Ensure the right section is a flex container */
+            align-items: center; /* Center items vertically */
+            margin-left: auto; /* Push hamburger to the right */
+
+            .hamburger{
+                width: 32px;
+                height: 25px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                scroll-behavior: smooth;
+        scroll-snap-type: y mandatory;
+        scrollbar-width: none;  /*only for firfox */
+       
+        &::-webkit-scrollbar{
+            display: none;
+        }
+                #spanright {
+                    
+                    width: 100%; /* Full width for each line */
+                    height: 3px; /* Thickness of lines */
+                    background-color: goldenrod; /* Default color */
+                    transition: all 0.3s ease; /* Smooth transition */
+                }
+            }
+        }
+    }
+
+    &.active {
+        background-color: goldenrod;
+        color: #ffffff;
+
+        .hamburger {
+            #spanright {
+                &:first-child {
+                    background-color: #fff; /* Change color when active */
+                    transform: rotate(45deg); /* Rotate first line */
+                }
+
+                &:nth-child(2) {
+                    opacity: 0; /* Hide middle line */
+                }
+
+                &:last-child {
+                    background-color: #fff; /* Change color when active */
+                    transform: rotate(-45deg); /* Rotate last line */
+                }
+            }
+        }
+
+        /* Change logo color to white when active */
+        .left .logo {
+            color: white; /* Change logo color */
+        }
+
+        /* Change icon color to white when active */
+        .left .icon {
+            color: white; /* Change icon color */
+        }
+    }
+}
+
+/* Media query for further adjustments on small screens */
+@media (max-width: 768px) {
+    .right {
+        margin-left: 10px; /* Reduce left margin on smaller screens */
+    }
+
+    .hamburger {
+        width: 30px; /* Smaller size for mobile */
+        height: 18px; /* Adjust height for better fit */
+        margin-right: 10px; /* Add right margin for spacing */
+    }
+}

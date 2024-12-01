@@ -1,0 +1,125 @@
+.Meat {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-family: 'Encode Sans', sans-serif;
+  margin-top: 50px;
+  font-weight: 700;
+  font-size: 40px;
+  color: goldenrod;
+  z-index: 2;
+  margin-bottom: 50px;
+}
+
+.slider {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 items per row */
+  gap: 20px;
+  width: 80%;
+  max-width: 1200px;
+  overflow-x: auto; /* Ensure scrollable if there are many cards */
+  padding-bottom: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  width: 350px; /* Original card width */
+  height: 300px; /* Original card height preserved for desktop */
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: goldenrod;
+  text-align: center;
+  overflow: hidden;
+}
+
+.card.featured {
+  width: 400px; /* Featured card original size */
+  height: 350px;
+  margin: 0 20px;
+}
+
+.card:hover {
+  transform: scale(0.8); /* Slight scale for hover effect */
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.img {
+  width: 90%; /* Larger image width */
+  height: auto; /* Maintain aspect ratio */
+  max-height: 250px; /* Prevent oversized images */
+  border-radius: 10px;
+  object-fit: cover;
+  overflow: hidden;
+}
+
+.center {
+  font-size: 25px;
+  padding: 10px;
+}
+
+.bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.name, .name2 {
+  color: #012060;
+  font-weight: 400;
+}
+
+/* Media query for medium screens */
+@media only screen and (max-width: 768px) {
+  .slider {
+    grid-template-columns: repeat(2, 1fr); /* 2 items per row on smaller screens */
+  }
+
+  .card {
+    height: 150px; /* Slightly reduced height for medium screens */
+  }
+
+  .img {
+    width: 110%; 
+    max-height: 200px; /* Ensure the image fits well in smaller cards */
+  }
+}
+
+/* Media query for small screens */
+@media only screen and (max-width: 480px) {
+  .slider {
+    grid-template-columns: 1fr; /* 1 item per row on very small screens */
+  }
+
+  .card {
+    width: 100%; /* Full width for small screens */
+    height: 100px; /* Reduced card height */
+  }
+
+  .img {
+    width: 100%; /* Slightly smaller image */
+   height: 150px; /* Ensure image stays within the reduced card */
+  }
+}
