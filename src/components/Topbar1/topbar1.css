@@ -134,13 +134,9 @@
     }
 }
 
-/* Hide the hamburger on small screens */
+/* Ensure hamburger is hidden on small screens */
 @media (max-width: 768px) {
     .right .hamburger {
-        display: none; /* Hide the hamburger icon */
-    }
-    @media (max-width: 450px) {
-    .right .hamburger {
-        display: none; /* Hide the hamburger icon */
+        display: none !important; /* Enforce hiding */
     }
 }
