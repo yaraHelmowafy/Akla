@@ -8,7 +8,7 @@
     .imageContaineri {
       margin-top: 50px; /* Adjust as needed */
       width: 80%; /* Increase the width for a bigger image */
-      height: 75vh; /* Set the height to be responsive */
+      height: 85vh; /* Set the height to be responsive */
       color: white;
       border-radius: 20%;
       display: flex;
