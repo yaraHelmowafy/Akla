@@ -1,5 +1,4 @@
 .intro {
-  /* background-color: white; */
   display: flex;
 
   .lefti {
@@ -7,20 +6,21 @@
     overflow: hidden;
 
     .imageContaineri {
-      margin-top: 70px; /* Move image down by 20px more */
-      width: 65%; /* Increase the width for a bigger image */
-      height: auto;
+      margin-top: 50px; /* Adjust as needed */
+      width: 80%; /* Increase the width for a bigger image */
+      height: 75vh; /* Set the height to be responsive */
       color: white;
       border-radius: 20%;
       display: flex;
-      align-items: center; /* Center the image horizontally */
-      justify-content: center; /* Center the image vertically */
-      float: right;
+      align-items: center; /* Center the image vertically */
+      justify-content: center; /* Center the image horizontally */
+      margin-left: auto; /* Center the container horizontally */
+      margin-right: auto; /* Center the container horizontally */
 
       .imgi {
-        height: 90%;
-        width: 100%;
-        object-fit: cover;
+        width: 100%; /* Make the image fill the container width */
+        height: 100%; /* Make the image fill the container height */
+        object-fit: cover; /* Ensure the image is scaled properly */
       }
     }
   }
@@ -102,12 +102,9 @@
       width: 100%;
 
       .imageContaineri {
-        width: 65%; /* Slightly increase image size for tablets */
-        margin-top: 80px; /* Move the image down more */
-        height: auto;
-        float: none;
-        justify-content: center;
-        align-items: center;
+        width: 80%; /* Increase size for tablets */
+        height: 60vh; /* Adjust height to fit the screen better */
+        margin-top: 80px; /* Adjust as needed */
       }
     }
 
@@ -137,12 +134,9 @@
         width: 100%;
 
         .imageContaineri {
-          width: 50%; /* Increase image size for small mobile screens */
-          margin-top: 90px; /* Move the image down more */
-          height: auto;
-          float: none;
-          justify-content: center;
-          align-items: center;
+          width: 70%; /* Make the image larger for small screens */
+          height: 50vh; /* Adjust height to fit the screen */
+          margin-top: 90px; /* Move the image down */
         }
       }
 
