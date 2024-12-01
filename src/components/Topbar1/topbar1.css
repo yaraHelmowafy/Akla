@@ -3,7 +3,7 @@
         display: none;
     }
     width: 100%;
-    height: 70px; /* Ensure consistent height */
+    height: 70px;
     background-color: white;
     position: fixed;
     top: 0;
@@ -11,11 +11,11 @@
     transition: all 1s ease;
 
     .wrapper {
-        padding: 10px 20px; /* Adjusted padding for smaller screens */
+        padding: 10px 20px;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+        flex-wrap: wrap;
 
         .left {
             display: flex;
@@ -23,20 +23,20 @@
             color: inherit;
 
             .logo {
-                font-size: 1.8rem; /* Use relative units */
+                font-size: 1.8rem;
                 font-weight: 700;
                 text-decoration: none;
-                color: goldenrod; /* Default logo color */
-                margin-right: 20px; /* Reduced margin for smaller screens */
-                transition: color 0.3s ease; /* Transition for color change */
+                color: goldenrod;
+                margin-right: 20px;
+                transition: color 0.3s ease;
             }
 
             .itemsection {
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin-left: auto; /* Push item section to the right */
-                flex-wrap: wrap; /* Allow wrapping on smaller screens */
+                margin-left: auto;
+                flex-wrap: wrap;
                 margin-left: 450px;
             }
 
@@ -44,16 +44,16 @@
                 display: flex;
                 align-items: center;
                 justify-content: center;
-                margin: 0 10px; /* Added margin for spacing */
+                margin: 0 10px;
             }
 
             .icon {
-                font-size: 1.5rem; /* Use relative units */
+                font-size: 1.5rem;
                 margin-right: 10px;
-                color: goldenrod; /* Default icon color */
-                transition: color 0.3s ease; /* Transition for color change */
+                color: goldenrod;
+                transition: color 0.3s ease;
                 &:hover {
-                    font-size: 1.8rem; /* Slightly increase size on hover */
+                    font-size: 1.8rem;
                 }
             }
 
@@ -62,42 +62,41 @@
                 text-decoration: none;
             }
 
-            /* Additional styles for responsiveness */
             @media (max-width: 768px) {
                 .itemsection {
-                    margin-left: 0; /* Reset margin on smaller screens */
+                    margin-left: 0;
                 }
 
                 .logo {
-                    font-size: 1.5rem; /* Smaller logo on mobile */
+                    font-size: 1.5rem;
                 }
             }
         }
 
         .right {
-            display: flex; /* Ensure the right section is a flex container */
-            align-items: center; /* Center items vertically */
-            margin-left: auto; /* Push hamburger to the right */
+            display: flex;
+            align-items: center;
+            margin-left: auto;
 
-            .hamburger{
+            .hamburger {
                 width: 32px;
                 height: 25px;
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
                 scroll-behavior: smooth;
-        scroll-snap-type: y mandatory;
-        scrollbar-width: none;  /*only for firfox */
-       
-        &::-webkit-scrollbar{
-            display: none;
-        }
+                scroll-snap-type: y mandatory;
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
                 #spanright {
-                    
-                    width: 100%; /* Full width for each line */
-                    height: 3px; /* Thickness of lines */
-                    background-color: goldenrod; /* Default color */
-                    transition: all 0.3s ease; /* Smooth transition */
+                    width: 100%;
+                    height: 3px;
+                    background-color: goldenrod;
+                    transition: all 0.3s ease;
                 }
             }
         }
@@ -110,42 +109,34 @@
         .hamburger {
             #spanright {
                 &:first-child {
-                    background-color: #fff; /* Change color when active */
-                    transform: rotate(45deg); /* Rotate first line */
+                    background-color: #fff;
+                    transform: rotate(45deg);
                 }
 
                 &:nth-child(2) {
-                    opacity: 0; /* Hide middle line */
+                    opacity: 0;
                 }
 
                 &:last-child {
-                    background-color: #fff; /* Change color when active */
-                    transform: rotate(-45deg); /* Rotate last line */
+                    background-color: #fff;
+                    transform: rotate(-45deg);
                 }
             }
         }
 
-        /* Change logo color to white when active */
         .left .logo {
-            color: white; /* Change logo color */
+            color: white;
         }
 
-        /* Change icon color to white when active */
         .left .icon {
-            color: white; /* Change icon color */
+            color: white;
         }
     }
 }
 
-/* Media query for further adjustments on small screens */
+/* Hide the hamburger on small screens */
 @media (max-width: 768px) {
-    .right {
-        margin-left: 10px; /* Reduce left margin on smaller screens */
-    }
-
-    .hamburger {
-        width: 30px; /* Smaller size for mobile */
-        height: 18px; /* Adjust height for better fit */
-        margin-right: 10px; /* Add right margin for spacing */
+    .right .hamburger {
+        display: none; /* Hide the hamburger icon */
     }
 }
