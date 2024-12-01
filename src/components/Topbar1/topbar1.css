@@ -134,9 +134,9 @@
     }
 }
 
-/* Ensure hamburger is hidden on small screens */
+/* Force the hamburger to disappear on screens <= 768px */
 @media (max-width: 768px) {
-    .right .hamburger {
-        display: none !important; /* Enforce hiding */
+    .topbar .right .hamburger {
+        display: none !important; /* Use !important to ensure it's overridden */
     }
 }
